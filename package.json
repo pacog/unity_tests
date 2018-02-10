@@ -22,5 +22,5 @@
   },
   "gh-pages-deploy": {
     "staticpath": "src"
-  },
+  }
 }
