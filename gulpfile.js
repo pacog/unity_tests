@@ -1,15 +1,15 @@
 const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages');
 const cachebust = require('gulp-cache-bust');
 
 gulp.task('deploy', ['gh-pages-upload']);
 
-gulp.task('gh-pages-upload', function() {
+gulp.task('cache-bust', function() {
     'use strict';
 
-    return gulp.src('./src/**/*')
+    return gulp
+        .src('./src/**/*.html')
         .pipe(cachebust({
             type: 'timestamp'
         }))
-        .pipe(ghPages());
+        .pipe(gulp.dest('./src'));
 });
