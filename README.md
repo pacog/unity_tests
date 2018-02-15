@@ -1,6 +1,7 @@
 # unity_tests
 
 ## Deploy
+gulp cache-bust
 npm run deploy
 
 ## Run
